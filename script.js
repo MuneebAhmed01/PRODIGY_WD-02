@@ -25,7 +25,7 @@ function stopTimer(){
     startButton.disabled = false;
     stopButton.disabled = true;
 }
-
+// reset timer
 function resetTimer(){
     clearInterval(timerInterval);
 
@@ -42,7 +42,7 @@ function formatTimer(elapsedTime){
     const seconds = Math.floor((elapsedTime % (1000 * 60)) / 1000);
     const mseconds = Math.floor((elapsedTime % 1000) / 10);
     return (
-        (hours ? (hours > 9 ? hours : "0" + hours) : "00")
+        (hours ? (hours > 10 ? hours : "0" + hours) : "00")
         + ":" +
         (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00")
         + ":" +
